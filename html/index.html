@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="js/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        table caption{
+            font-size: 25px;
+        }
+        table img{
+            width: 100px;
+            height: 100px;
+        }
+        table td,table th{
+            text-align: center;
+        }
+        table tbody tr td{
+            line-height: 100px;
+        }
+        .content{
+            position: relative;
+        }
+        .add-product{
+            position: absolute;
+            top: 0;
+            right: 40px;
+        }
+        table tbody tr td:last-child a{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">京东超市</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">商品列表</a></li>
+                    <li><a href="#">购物车</a></li>
+                    <li><a href="#">个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="content">
+        <table class="table table-hover">
+            <caption>商品列表</caption>
+            <thead>
+                <tr>
+                    <th>商品</th>
+                    <th>名称</th>
+                    <th>简介</th>
+                    <th>价格</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="img/01.jpg" alt=""></td>
+                    <td>Bangalore</td>
+                    <td>560001</td>
+                    <td>￥100</td>
+                    <td><a>删除</a></td>
+                </tr>
+                <tr>
+                    <td><img src="img/02.jpg" alt=""></td>
+                    <td>Mumbai</td>
+                    <td>400003</td>
+                    <td>￥100</td>
+                    <td><a>删除</a></td>
+                </tr>
+                <tr>
+                    <td><img src="img/03.jpg" alt=""></td>
+                    <td>Pune</td>
+                    <td>411027</td>
+                    <td>￥100</td>
+                    <td><a>删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 按钮触发模态框 -->
+        <button class="btn btn-primary btn-lg add-product" data-toggle="modal" data-target="#myModal">添加商品</button>
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">添加商品</h4>
+                    </div>
+                    <!-- <div class="modal-body">在这里添加一些文本</div> -->
+                    <div class="modal-body">
+                        <label for="pro-name">商品名称</label>
+                        <input type="text" class="form-control" id="pro-name" placeholder="商品名称">
+                    </div>
+                    <div class="modal-body">
+                        <label for="pro-product">商品介绍</label>
+                        <textarea id="pro-product" class="form-control" rows="2" placeholder="商品介绍"></textarea>
+                    </div>
+                    <div class="modal-body">
+                        <label for="pro-price">商品价格</label>
+                        <input id="pro-price" class="form-control" rows="2" placeholder="商品价格"></input>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">提交更改</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+    </section>
+</body>
+</html>
