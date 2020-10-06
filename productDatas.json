@@ -1,27 +1,32 @@
 {
-    "products": [{
-        "id": 1,
-        "title": "优乐多乳酸菌酸奶饮料",
-        "produce": "牛奶发酵益生菌，100ml*20瓶",
-        "img":"img/01.jpg",
-        "price": "29.90"
-    }, {
-        "id": 2,
-        "title": "香蕉味牛奶饮料",
-        "produce": "韩国进口宾格瑞，200ml*6",
-        "img": "img/02.jpg",
-        "price": "31.80"
-    }, {
-        "id": 3,
-        "title": "中老年奶粉",
-        "produce": "伊利欣活，900g*2",
-        "img": "img/03.jpg",
-        "price": "145.80"
-    }, {
-        "id": 4,
-        "title": "红枣枸杞牛奶饮品",
-        "produce": "燕塘，250ml*16盒/箱",
-        "img": "img/04.jpg",
-        "price": "47.00"
-    }]
+  "products": [
+    {
+      "id": 1,
+      "title": "优乐多乳酸菌酸奶饮料",
+      "produce": "牛奶发酵益生菌，100ml*20瓶",
+      "img": "img/01.jpg",
+      "price": "29.90"
+    },
+    {
+      "id": 2,
+      "title": "香蕉味牛奶饮料",
+      "produce": "韩国进口宾格瑞，200ml*6",
+      "img": "img/02.jpg",
+      "price": "31.80"
+    },
+    {
+      "id": 3,
+      "title": "中老年奶粉",
+      "produce": "伊利欣活，900g*2",
+      "img": "img/03.jpg",
+      "price": "145.80"
+    },
+    {
+      "id": 4,
+      "title": "红枣枸杞牛奶饮品",
+      "produce": "燕塘，250ml*16盒/箱",
+      "img": "img/04.jpg",
+      "price": "47.00"
+    }
+  ]
 }
