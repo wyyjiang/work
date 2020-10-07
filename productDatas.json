@@ -1,53 +1,46 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "优乐多乳酸菌酸奶饮料",
-      "produce": "牛奶发酵益生菌，100ml*20瓶",
+      "title": "商品1",
+      "produce": "商品1的自我介绍",
       "img": "img/01.jpg",
-      "price": "29.90"
+      "price": "11.11",
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "香蕉味牛奶饮料",
-      "produce": "韩国进口宾格瑞，200ml*6",
+      "title": "商品2",
+      "produce": "商品2的自我介绍",
       "img": "img/02.jpg",
-      "price": "31.80"
+      "price": "22.22",
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "中老年奶粉",
-      "produce": "伊利欣活，900g*2",
+      "title": "商品3",
+      "produce": "商品3的自我介绍",
       "img": "img/03.jpg",
-      "price": "145.80"
+      "price": "33.33",
+      "id": 3
     },
     {
-      "id": 4,
-      "title": "红枣枸杞牛奶饮品",
-      "produce": "燕塘，250ml*16盒/箱",
+      "title": "商品4",
+      "produce": "商品4的自我介绍",
       "img": "img/04.jpg",
-      "price": "47.00"
+      "price": "44.44",
+      "id": 4
     },
     {
-      "title": "原味豆奶",
-      "produce": "泰国进口，125ml*6盒",
+      "title": "商品5",
+      "produce": "商品5的自我介绍",
       "img": "img/05.jpg",
-      "price": "13.09",
+      "price": "55.55",
       "id": 5
     },
     {
-      "title": "全脂纯牛奶",
-      "produce": "德国进口牛奶，200ml*24",
+      "title": "商品6",
+      "produce": "商品6的自我介绍",
       "img": "img/06.jpg",
-      "price": "69.90",
+      "price": "66.66",
       "id": 6
-    },
-    {
-      "title": "有机燕麦片",
-      "produce": "营养早餐，西麦",
-      "img": "img/07.jpg",
-      "price": "160.00",
-      "id": 7
     }
   ]
 }

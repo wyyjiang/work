@@ -10,11 +10,22 @@ $(function () {
                 <td>${item.title}</td>
                 <td>${item.produce}</td>
                 <td>￥${item.price}</td>
-                <td><a data-id="${item.id}">删除</a></td>
+                <td><a data-id="${item.id}" class="delete">删除</a></td>
             </tr>
             `;
             $("tbody").html(str);
         });
+        // 删除数据
+        $("tbody>tr>td:last-child a").click(function (e) {
+            // 阻止冒泡
+            var evt = e || event;
+            evt.stopPropagation();
+            // 删除json中的数据
+            var id = e.currentTarget.getAttribute("data-id");
+            axios.delete("http://localhost:3000/products/" + id);
+            // 删除页面中的结构
+            $(this).parent().parent().detach();
+        })
     })
     // 添加数据
     let add_product = $(".add-product");
@@ -27,7 +38,7 @@ $(function () {
             title: pro_name.val(),
             produce: pro_produce.val(),
             img: pro_url.val(),
-            price:pro_price.val()
+            price: pro_price.val()
         }).then(() => {
             location.reload();
         })
