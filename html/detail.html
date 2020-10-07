@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情信息</title>
+    <style>
+        #product{
+            border: solid 2px pink;
+            width: 400px;
+            margin: 0 auto;
+        }
+        #product p{
+            display: inline-block;
+        }
+        ul,li{
+            list-style: none;
+        }
+        li{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="product">
+        
+    </ul>
+    <script src="js/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        // 取当前商品的id值
+        var str = document.cookie;
+        var arr = str.split("; ");
+        for (var i = 0; i < arr.length; i++) {
+            var arr1 = arr[i].split("=");
+            if (arr1[0] == "productID") {
+                var id = arr1[1];
+            }
+        }
+        axios.get("http://localhost:3000/products/" + id).then(res => {
+            var str = `
+                <li><img src="${res.data.img}" alt=""></li>
+                <li><p>${res.data.title}</p></li>
+                <li><p>${res.data.produce}</p></li>
+                <li><p>￥${res.data.price}</p></li>
+            `;
+            $("#product").html(str);
+        })
+    </script>
+</body>
+
+</html>

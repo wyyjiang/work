@@ -6,12 +6,12 @@ $(function () {
         res.data.forEach(item => {
             str += `
             <tr data-id="${item.id}">
-                    <td><img src="${item.img}" alt=""></td>
-                    <td>${item.title}</td>
-                    <td>${item.produce}</td>
-                    <td>￥${item.price}</td>
-                    <td><a data-id="${item.id}">删除</a></td>
-                </tr>
+                <td><img src="${item.img}" alt=""></td>
+                <td>${item.title}</td>
+                <td>${item.produce}</td>
+                <td>￥${item.price}</td>
+                <td><a data-id="${item.id}">删除</a></td>
+            </tr>
             `;
             $("tbody").html(str);
         });
@@ -31,5 +31,12 @@ $(function () {
         }).then(() => {
             location.reload();
         })
+    })
+    // 点击tr进入详情页
+    $("tbody").click(function (e) {
+        var id = e.target.parentNode.getAttribute("data-id");
+        console.log(id);
+        document.cookie = "productID=" + id;
+        location.href = "detail.html";
     })
 })
